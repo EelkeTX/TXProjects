@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link href="./styles.css" type="text/css" rel="stylesheet"/>
+    <title>Northside Youth Soccer League</title>
+    <img src="images/header.png"/>
+  </header>
+  <body>
+    <nav>
+      <ul class="navlinks">
+          <li class="navbutton"><a href="./index.html">Home</a></li>
+          <li class="navbutton"><a href="./about.html">About NYSL</a></li>
+          <li class="navbutton"><a href="./info.html">Game Information</a></li>
+          <li class="navbutton"><a href="./rules.html">Rules</a></li>
+          <li class="navbutton" id="youarehere"><a href="./registration.html">Registration</a></li>
+          <li class="navbutton"><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mainbody">
+      <form name="registratie">
+        <div class="group">
+          <label for="firstname">Player's first name:</label><br>
+          <input class="breed1" type="text" placeholder="First Name" name="firstname" required>
+        </div>
+        <div class="group">
+          <label for="lastname">Player's last name:</label><br>
+          <input class="breed1" type="text" placeholder="Last Name" name="lastname" required>
+        </div>
+        <div class="group">
+            <label for="streetaddress">Street Address:</label><br>
+            <input class="breed2" type="text" placeholder="Street Address" name="streetaddress" size="118" required>
+        </div>
+        <div class="group">
+            <label for="city">City:</label><br>
+            <input class="breed3" type="text" placeholder="City" name="city" size="25" required>
+        </div>
+        <div class="group">
+            <label for="zipcode">Zip Code:</label><br>
+            <input class="breed3" title="you idiot!" type="text" placeholder="Zip Code" pattern= "(\d{5}([\-]\d{4})?)" name="zipcode" size="20" required>
+        </div>
+        <div class="group">
+            <label for="birthdate">BirthDate (MM/DD/YY):</label><br>
+            <input class="breed3" type="text" pattern = "^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$" placeholder="Birth Date" name="birthdate" size="25" required>
+        </div>
+        <div class="radiogroup">
+            <label for="gender">Gender:</label>
+            <input class="radiomargin" type="radio" name="gender" value="male">Male
+            <input class="radiomargin" type="radio" name="gender" value="female">Female
+        </div><br>
+        <div class="radiogroup">
+            <label class ="radiolabel" for="grade">Grade:</label>
+            <input class="radiomargin" type="radio" name="grade" value="preschool">Pre- School
+            <input class="radiomargin" type="radio" name="grade" value="firstgrade">First Grade
+            <input class="radiomargin" type="radio" name="grade" value="secondgrade">Second Grade
+            <input class="radiomargin" type="radio" name="grade" value="thirdgrade">Third Grade
+            <input class="radiomargin" type="radio" name="grade" value="fourthgrade">Fourth Grade
+            <input class="radiomargin" type="radio" name="grade" value="fifthgrade">Fifth Grade
+        </div>
+        <div class="group">
+            <label for="parentguardianname">Parent/Guardian:</label><br>
+            <input class="breed2" type="text" placeholder="Parent/Guardian name" name="parentguardianname" size="118" required>
+        </div>
+        <div class="group">
+            <label for="contactphone">Contact Phone:</label><br>
+            <input class="breed1" type="text" placeholder="Contact Phone Number" name="contactphone" size="55" required>
+          </div>
+          <div class="group">
+            <label for="contactemail">Contact e-mail:</label><br>
+            <input class="breed1" type="email" placeholder="Contact e-mail" name="contactemail" size="55" required>
+          </div><br><br>
+          <p class="plabel">Which elementary school do you live near?</p><br>
+          <div class="group">
+              <label for="closest">First Closest School:</label><br>
+              <select name="closest">
+                <option value="katzenmaier">AJ Katzenmaier Elementary</option>
+                <option value="greenbay">Greenbay Elementary</option>
+                <option value="yeager">Howard A Yeager Elementary</option>
+                <option value="marjoriephart">Marjorie P Hart Elementary</option>
+                <option value="northelementary">North Elementary</option>
+                <option value="southelementary">South Elementary</option>
+              </select>
+            </div>
+            <div class="group" id="closest">
+              <label for="secondclosest">Second Closest School:</label><br>
+              <select name="secondclosest" width="55">
+                <option value="katzenmaiersecond">AJ Katzenmaier Elementary</option>
+                <option value="greenbaysecond" selected>Greenbay Elementary</option>
+                <option value="yeagersecond">Howard A Yeager Elementary</option>
+                <option value="marjoriephartsecond">Marjorie P Hart Elementary</option>
+                <option value="northelementarysecond">North Elementary</option>
+                <option value="southelementarysecond">South Elementary</option>
+              </select>
+            </div><br><br>           
+            <div class="checkboxgroup">
+              <p class="plabel">What position(s) do you normally play? (check all that apply)</p>
+              <input type="checkbox" name="forward" value="forward">Forward
+              <input type="checkbox" name="midfield" value="midfield">Midfield
+              <input type="checkbox" name="defender" value="defender">Defender 
+              <input type="checkbox" name="goalkeeper" value="goalkeeper">Goalkeeper
+            </div><br><br>
+            <div class="checkboxgroup">
+                <p class="plabel">What position(s) do you want to play? &nbsp (check all that apply)</p>
+                <input type="checkbox" name="wantforward" value="wantforward">Forward
+                <input type="checkbox" name="wantmidfield" value="wantmidfield">Midfield
+                <input type="checkbox" name="wantdefender" value="wantdefender">Defender 
+                <input type="checkbox" name="wantgoalkeeper" value="wantgoalkeeper">Goalkeeper
+            </div><br><br><br>
+            <div class="checkboxsolo">
+                <input type="checkbox" onclick="hideSizes()" name="haveuniform" value="haveuniform">&nbspI already have a uniform
+            </div>
+            <script>
+              const hideSizes = () => {
+                const getElement = document.getElementById("sizes");
+                if(getElement.style.display === "none"){
+                  getElement.style.display = "block";
+                } else {
+                  getElement.style.display = "none";
+                }
+              }
+            </script>
+            <div id="sizes">
+            <div class="radiogroupvert">
+                <label class ="radiolabel2" for="jerseysize">Jersey Size:</label>
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseyyouthsmall">Youth Small
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseyyouthmedium">Youth Medium
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseyyouthlarge">Youth Large
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseysmall">Small
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseymedium">Medium
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseylarge">Large
+                <input class="radiomargin" type="radio" name="jerseysize" value="jerseyextralarge">Extra Large
+            </div>
+            <div class="radiogroupvert">
+                <label class ="radiolabel2" for="jerseysize">Shorts Size:</label>
+                <input class="radiomargin" type="radio" name="shortssize" value="shortsyouthsmall">Youth Small
+                <input class="radiomargin" type="radio" name="shortssize" value="shortsyouthmedium">Youth Medium
+                <input class="radiomargin" type="radio" name="shortssize" value="shortsyouthlarge">Youth Large
+                <input class="radiomargin" type="radio" name="shortssize" value="shortssmall">Small
+                <input class="radiomargin" type="radio" name="shortssize" value="shortsmedium">Medium
+                <input class="radiomargin" type="radio" name="shortssize" value="shortslarge">Large
+                <input class="radiomargin" type="radio" name="shortssize" value="shortsextralarge">Extra Large
+            </div>
+            </div><br><br>
+            <p class="underlined">Permission to play</p>
+            <br>
+            <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth Soccer League (NYSL).
+              In recognizing the possibility of physical injury associated with soccer and in consideration for the "League" accepting the registrant for its soccer programs and activities,
+              i hereby release, discharge, and/or otherwise indemnify NYSL, their employee and associated personnnel and volunteers, including the facilities used for practices and games,
+              against any claim by or on behalf of the registrant as a result of the registrants participation in the program and/or being transported to or from NYSL sponsored activities,
+              which trasnportation.
+            </p><br>
+            <p>By signing below, i hereby agree and authorize the above. In addition by signing below, i also acknowledge that i have read the cancellation policy and agree to its terms</p><br>
+            <div class="group">
+                <label for="parentguardianfullname">Parent/Guardians full name:</label><br>
+                <input class="breed1" type="text" placeholder="Parent/Guardians full name" name="parentguardianfullname" size="55" required>
+              </div>
+              <div class="group">
+                <label for="date">Date (MM/DD/YY):</label><br>
+                <input class="breed1" pattern = "^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$" type="text" placeholder="Date" name="date" size="55" required>
+              </div>
+              <div class="submit">
+                <input id="submit" type="submit" value="Submit">
+              </div>
+      </form>
+    </div>
+  </body>
+  <footer>
+  </footer>
+</html>

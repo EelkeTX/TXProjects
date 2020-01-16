@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+h3{
+    background-color: rgba(0, 128, 0, 0.74);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+h2{
+    background-color: rgba(0, 128, 0, 0.74);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+body {
+    margin: 0 0 46px;
+    /* bottom = footer height */
+    padding: 25px;
+    background-color: rgba(34, 139, 34, 0.178);
+}
+header {
+    width: 960px;
+    margin: 0 auto;
+}
+.abc {
+    list-style: lower-alpha;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 46px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("./images/grasfooter.png");
+}
+.mainbody {
+    width: 960px;
+    margin: 5px auto;
+    padding: 25px;
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.274);
+}
+.mainbody ul  {
+    margin-left: 20px;
+}
+.mainbody ol  {
+    margin-left: 20px;
+}
+nav {
+    width: 960px;
+    background: rgba(0, 128, 0, 0.274) ;
+    padding: 5px 2px;
+    margin: 0 auto;
+    border: 2px solid green;
+}
+.navlinks {
+    margin: 0 auto;
+    font-size: 16px;
+    /* padding: 15px 5px; */
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.navlinks li {
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 15px 0;
+    margin: 0 0;
+}
+#youarehere{
+    background-color: rgba(0, 128, 0, 0.274);
+}
+.navlinks li a {
+    color: black;
+    text-decoration: none;
+    padding: 15px 40px;
+    margin: 0 0;
+    /* border: 2px solid black; */
+}
+.navlinks li:hover {
+    background-color: white;
+    box-sizing: border-box;
+}
+.navlinks li a:hover {
+    padding: 15px 38px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.781);
+    border: 2px solid green;
+}
+.navbutton {
+    box-sizing: border-box;
+    display: block;
+    width: auto;
+}
+table {
+    width: 100%;
+}
+.cursive {
+    font-style: italic;
+}
+th {
+    width: 25%;
+}
+.map {
+    margin: 0 auto;
+}
+.maptable a:link {
+    color: black;
+}
+.maptable a:visited {
+    color: black;
+}
+.maptable a:hover {
+    color: white;
+    background-color: rgba(0, 128, 0, 0.74);
+}
+.maptable a:active{
+    color: rgba(3, 173, 3, 0.815);
+}
+input {
+    height: 2rem;
+}
+.group {
+    display: inline-block;
+    margin: 5px 10px;
+}
+.radiogroup {
+    display: inline-flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+.radiomargin {
+    margin: 5px 10px;
+}
+label {
+    background-color: rgba(0, 128, 0, 0.74);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+.radiolabel{
+    margin-left: 0px;
+}
+.plabel {
+    margin-left: 10px;
+}
+select{
+    width: 400px;
+}
+ .checkboxgroup{
+    display: inline-flex;
+    align-items: center;
+    margin: 0px 10px;
+    border: 2px solid green;
+    width: 820px;
+    background-color: white;
+} 
+.checkboxgroup input{
+    margin: 0px 5px;
+    margin-left: 20px;
+}
+.radiogroupvert{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+.checkboxsolo{
+    display: inline-flex;
+    align-items: center;
+    margin: 0px 10px;
+    margin-right: 20px;
+}
+.underlined{
+    text-decoration: underline;
+    margin-left: 10px;
+}
+p{
+    margin-left: 10px;
+}
+.radiolabel2{
+    margin-left: 5px;
+}
+.breed1 {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  .breed2 {
+    width: 820px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  .breed3 {
+    width: 175px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  #submit{
+      margin-left: 10px;
+      width: 825px;
+      background-color: rgba(0, 128, 0, 0.74);
+      color: white;
+  }
+  .sizes{
+      display: block;
+  }
